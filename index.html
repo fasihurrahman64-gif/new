@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-code"></div>
+
+    <div class="chat-box">
+      <p>🎂 Happy Birthday ❤️✨ html</p>
+      <span>12:00 am ✓✓</span>
+    </div>
+
+    <div class="birthday-card">
+      <div class="confetti"></div>
+
+      <div class="cake">
+        <div class="candle"></div>
+        <div class="flame"></div>
+      </div>
+
+      <h1 id="text"></h1>
+    </div>
+
+    <script>
+      const message = "Happy Birthday Zunera Baji 🎂❤️ ";
+      let i = 0;
+      const speed = 120;
+
+      function typeWriter() {
+        if (i < message.length) {
+          document.getElementById("text").innerHTML += message.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      setTimeout(typeWriter, 1000);
+    </script>
+  </body>
+</html>
