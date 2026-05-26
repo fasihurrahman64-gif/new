@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background: #fad660;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* fake coding background */
+.background-code {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 30px,
+    rgba(255, 255, 255, 0.03) 31px
+  );
+  opacity: 0.3;
+}
+
+/* whatsapp style chat */
+.chat-box {
+  background: #1f8f65;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.chat-box span {
+  font-size: 12px;
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* birthday card */
+.birthday-card {
+  width: 350px;
+  height: 220px;
+  background: #f8c6d0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* confetti dots */
+.confetti::before,
+.confetti::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle, white 2px, transparent 2px),
+    radial-gradient(circle, #ff7eb3 2px, transparent 2px);
+  background-size: 40px 40px;
+  animation: float 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+/* cake */
+.cake {
+  width: 80px;
+  height: 45px;
+  background: #8b5e3c;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.cake::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  background: white;
+  top: -8px;
+  border-radius: 5px;
+}
+
+/* candle */
+.candle {
+  width: 8px;
+  height: 25px;
+  background: white;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* flame */
+.flame {
+  width: 10px;
+  height: 15px;
+  background: gold;
+  border-radius: 50%;
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 0.6s infinite alternate;
+}
+
+@keyframes flicker {
+  from {
+    transform: translateX(-50%) scale(1);
+  }
+  to {
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+/* text */
+h1 {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+  color: #d63384;
+  font-size: 28px;
+  font-weight: bold;
+}
